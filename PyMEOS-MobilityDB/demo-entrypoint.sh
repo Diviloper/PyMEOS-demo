@@ -3,10 +3,10 @@ set -e
 
 export PGPASSWORD='docker'
 
-psql -h mdb-test -p 5432 -U docker -d mobilitydb -c "DROP DATABASE IF EXISTS demo;"
-psql -h mdb-test -p 5432 -U docker -d mobilitydb -c "CREATE DATABASE demo;"
-psql -h mdb-test -p 5432 -U docker -d demo -c "CREATE EXTENSION MobilityDB CASCADE;"
-psql -h mdb-test -p 5432 -U docker -d demo -c "CREATE TABLE Trips(vehicle INTEGER,day DATE,seq INTEGER,trip tgeompoint);"
+psql -h pymeos-demo-db -p 5432 -U docker -d mobilitydb -c "DROP DATABASE IF EXISTS demo;"
+psql -h pymeos-demo-db -p 5432 -U docker -d mobilitydb -c "CREATE DATABASE demo;"
+psql -h pymeos-demo-db -p 5432 -U docker -d demo -c "CREATE EXTENSION MobilityDB CASCADE;"
+psql -h pymeos-demo-db -p 5432 -U docker -d demo -c "CREATE TABLE Trips(vehicle INTEGER,day DATE,seq INTEGER,trip tgeompoint);"
 
 python3 /pymeos-demo/load_db.py
 rm /pymeos-demo/trips.csv

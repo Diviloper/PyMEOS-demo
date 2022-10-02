@@ -2,7 +2,7 @@ from pymeos.db import MobilityDB
 from pymeos import Temporal, pymeos_initialize, pymeos_finalize
 import pandas as pd
 
-host = 'mdb-test'
+host = 'pymeos-demo-db'
 port = 5432
 db = 'demo'
 user = 'docker'
