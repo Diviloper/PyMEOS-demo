@@ -1,11 +1,10 @@
 FROM python:3.8-bullseye
 
+RUN pip install pymeos matplotlib jupyter
+
 WORKDIR /pymeos-demo
 COPY PyMEOS.ipynb /pymeos-demo/
 COPY trips.csv /pymeos-demo/
-
-
-RUN pip install pymeos matplotlib jupyter
 
 EXPOSE 8888
 
