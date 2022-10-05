@@ -19,4 +19,4 @@ These 3 demos are intended to be run in the corresponding docker containers:
   `docker run -it --rm -p 8888:8888 diviloper/pymeos-demo:pymeos-movingpandas`
 
 > The three demo containers will be removed as soon as they stop (which will happen when stopping the jupyter server).  
-> To avoid that, remove the `--rm` flag from the `docker run` commands
+> To avoid that, remove the `--rm` flag from the `docker run` commands.
