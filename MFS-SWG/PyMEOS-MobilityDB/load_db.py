@@ -13,7 +13,7 @@ pymeos_initialize()
 connection = MobilityDB.connect(host=host, port=port, database=db, user=user, password=password)
 cursor = connection.cursor()
 
-trips = pd.read_csv('./trips.csv', converters={'trip': Temporal.from_hexwkb})
+trips = pd.read_csv('trips.csv', converters={'trip': Temporal.from_hexwkb})
 
 for trip in trips.iterrows():
     t = trip[1]
